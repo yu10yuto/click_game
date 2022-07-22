@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クリックゲーム</title>
+    <style>
+        div{
+            background-color: blue;
+            box-shadow: 0px 6px rgb(56, 56, 56);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        div:hover{
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        div:active{
+            box-shadow: none;
+            position: relative;
+            top: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="score">スコア:0</h1>
+    <div onclick="Main()">Let's click here!</div>
+    <script>
+        let n = 0;
+        let score = document.getElementById("score");
+        function Main(){
+            n += 1;
+            score.innerHTML = `スコア:${n}`;
+        }
+    </script>
+</body>
+</html>
